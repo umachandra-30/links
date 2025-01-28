@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Learning Hub</title>
+    <style>
+        body {
+            font-family: "Bookman Old Style", serif;
+            background: url('image.png') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            margin-top: 10%;
+        }
+        .link-card {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s ease-in-out;
+            opacity: 0;
+        }
+        .link-card:nth-child(2n) {
+            animation: slideFromRight 1s ease-in-out forwards;
+        }
+        .link-card:nth-child(2n+1) {
+            animation: slideFromLeft 1s ease-in-out forwards;
+        }
+        @keyframes slideFromRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideFromLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .link-card:hover {
+            transform: scale(1.05);
+        }
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .link-button:hover {
+            transform: scale(1.1);
+            background-color: #45a049;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #00bcd4;
+            text-shadow: 0 0 5px #00bcd4, 0 0 10px #008ba3;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards 1.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Tech Learning Hub</h1>
+        <div class="link-card">
+            <h2>Computer Basics Course</h2>
+            <a class="link-button" href="https://www.netacad.com/courses/computer-hardware-basics?courseLang=en-US" target="_blank">Access Here</a>
+        </div>
+        <div class="link-card">
+            <h2>Operating Systems Basics Course</h2>
+            <a class="link-button" href="https://www.netacad.com/courses/operating-systems-basics?courseLang=en-US" target="_blank">Access Here</a>
+        </div>
+        <div class="link-card">
+            <h2>Programming Notes</h2>
+            <a class="link-button" href="https://goalkicker.com/" target="_blank">Access Here</a>
+        </div>
+        <div class="link-card">
+            <h2>Net Ninja</h2>
+            <a class="link-button" href="https://www.youtube.com/@NetNinja" target="_blank">Access Here</a>
+        </div>
+    </div>
+    <div class="footer">💡 Stay Curious, Keep Learning! 💡</div>
+</body>
+</html>
